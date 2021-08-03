@@ -17,5 +17,5 @@ Route::get('/', function () {
     return redirect( url('/nl/blog'));
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
