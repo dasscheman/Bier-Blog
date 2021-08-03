@@ -7,11 +7,9 @@
 
     "repositories": [
         {
+            "type": "vcs",
+            "url": "https://github.com/dasscheman/laravel-blog",
             "type": "path",
-            "url": "/home/daan/DevelopLaravel/laravel-blog",
-            "options": {
-                "symlink": true
-            }
         }
     ],
     "require": {
