@@ -8,8 +8,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/dasscheman/laravel-blog",
-            "type": "path",
+            "url": "https://github.com/dasscheman/laravel-blog"
         }
     ],
     "require": {

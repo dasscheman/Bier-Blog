@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19ba713b67b9e84edbc7f049b283296c",
+    "content-hash": "b8161a600334fb8ccd61920ad34a4c39",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,10 +61,16 @@
         {
             "name": "binshops/laravel-blog",
             "version": "dev-feature_add_fields",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dasscheman/laravel-blog.git",
+                "reference": "37eb7f1c35cbdb8fdc93e11841598e2165cb59d8"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/daan/DevelopLaravel/laravel-blog",
-                "reference": "e0c7ec3f695589f18bac21b1a4609c0c3c2a806b"
+                "type": "zip",
+                "url": "https://api.github.com/repos/dasscheman/laravel-blog/zipball/37eb7f1c35cbdb8fdc93e11841598e2165cb59d8",
+                "reference": "37eb7f1c35cbdb8fdc93e11841598e2165cb59d8",
+                "shasum": ""
             },
             "require": {
                 "cviebrock/eloquent-sluggable": "~8.0|~7.0|~6.0|~4.8|~4.7|~4.6|~4.5",
@@ -125,11 +131,10 @@
                 "write"
             ],
             "support": {
-                "docs": "https://github.com/binshops/laravel-blog"
+                "docs": "https://github.com/binshops/laravel-blog",
+                "source": "https://github.com/dasscheman/laravel-blog/tree/feature_add_fields_fork"
             },
-            "transport-options": {
-                "symlink": true
-            }
+            "time": "2021-08-03T12:00:00+00:00"
         },
         {
             "name": "brick/math",
