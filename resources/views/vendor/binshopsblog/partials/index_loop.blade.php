@@ -2,11 +2,11 @@
 {{--See the guide on binshops.binshops.com for how to copy these files to your /resources/views/ directory--}}
 {{--https://binshops.binshops.com/laravel-blog-package--}}
 
-<div class="col-md-6">
+<div class="col-md-4">
     <div class="blog-item">
 
         <div class='text-center blog-image'>
-            <?=$post->image_tag("medium", true, ''); ?>
+            <?=$post->image_tag("medium", true, 'postimage'); ?>
         </div>
         <div class="blog-inner-item">
             <h3 class=''><a href='{{$post->url($locale)}}'>{{$post->title}}</a></h3>

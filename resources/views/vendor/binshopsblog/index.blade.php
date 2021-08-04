@@ -47,15 +47,6 @@
         @if (config('binshopsblog.search.search_enabled') )
             @include('binshopsblog::sitewide.search_form')
         @endif
-        <div class="row">
-            <div class="col-md-12 text-center">
-                @foreach($lang_list as $lang)
-                    <a href="{{route("binshopsblog.index" , $lang->locale)}}">
-                        <span>{{$lang->name}}</span>
-                    </a>
-                @endforeach
-            </div>
-        </div>
     </div>
 
 @endsection
