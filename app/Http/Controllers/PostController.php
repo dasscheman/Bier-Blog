@@ -7,6 +7,8 @@ use BinshopsBlog\Models\BinshopsField;
 use BinshopsBlog\Models\BinshopsPostTranslation;
 use Illuminate\Http\Request;
 use PDF;
+use QrCode;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -22,21 +24,30 @@ class PostController extends Controller
 
     public function printlabel($slug, Request $request)
     {
+        $post = BinshopsPostTranslation::where('lang_id', 6)
+            ->where('binshops_post_translations.slug', '=', $slug)
+            ->with(['post' => function($query){
+                $query->where("is_published" , '=' , true);
+            }])->first();
+
+        $image = \QrCode::format('png')
+            ->size(200)->errorCorrection('H')
+            ->generate('A simple example of QR code!');
+        $output_file = '/images/qr-code/img-' . $slug . '.png';
+        Storage::disk('public')->put($output_file, $image); //storage/app/public/img/qr-code/img-1557309130.png
+
         $data = [
-            'post' => BinshopsPostTranslation::where('lang_id', 6)
-                    ->where('binshops_post_translations.slug', '=', $slug)
-                    ->with(['post' => function($query){
-                        $query->where("is_published" , '=' , true);
-                    }])->first(),
+            'post' => $post,
+            'qr_file' => $output_file,
             'startSgField' => BinshopsField::where('name', 'startsg')->first(),
             'eindSgField' => BinshopsField::where('name', 'eindsg')->first(),
             'alcoholField' => BinshopsField::where('name', 'alcohol')->first()
         ];
 
-//        return view('posts.printlabel', $data);
 
+//        return view('posts.printlabel', $data);
         $pdf = PDF::loadView('posts.printlabel', $data);
-        return $pdf->download('document.pdf');
+        return $pdf->stream('labels.pdf');
 
     }
 }
