@@ -21,9 +21,6 @@
             <div class="post-details-bottom">
                 <span class="light-text">Authored by: </span> {{$post->post->author->name}} <span class="light-text">Posted at: </span> {{date('d M Y ', strtotime($post->post->posted_at))}}
             </div>
-            <div class='text-center'>
-                <a href="{{$post->url($locale)}}" class="btn btn-primary">View Post</a>
-            </div>
         </div>
     </div>
 
