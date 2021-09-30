@@ -188,5 +188,5 @@ return [
     ],
 
     //Shows full text of post in listing pages like search result page or category page. Now it shows a preview
-    'show_full_text_at_list' => false,
+    'show_full_text_at_list' => true,
 ];
