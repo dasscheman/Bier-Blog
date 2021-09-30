@@ -1,4 +1,12 @@
 @if(\Auth::check() && \Auth::user()->canManageBinshopsBlogPosts())
+    @foreach($post->post->categories as $category)
+        @foreach($category->categoryTranslations as $translation)
+            @if($translation->slug == 'bier-batch')
+                <a href="{{route("printlabel", [$post->slug])}}" class="btn btn-primary btn-outline-secondary btn-sm pull-right float-right">Print label</a>
+                <?php break; ?>
+            @endif
+        @endforeach
+    @endforeach
     <a href="{{$post->edit_url()}}" class="btn btn-outline-secondary btn-sm pull-right float-right">Edit
         Post</a>
 @endif

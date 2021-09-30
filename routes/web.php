@@ -17,5 +17,9 @@ Route::get('/', function () {
     return redirect( url('/nl/blog'));
 });
 
+Route::get('/{blogPostSlug}/print',
+    'PostController@printlabel')
+    ->name('printlabel');
+
 Auth::routes(['register' => false]);
 
