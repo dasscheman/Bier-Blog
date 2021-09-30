@@ -31,7 +31,7 @@ class PostController extends Controller
             }])->first();
 
         $image = \QrCode::format('png')
-            ->size(200)->errorCorrection('H')
+            ->size(200)->errorCorrection('L')->margin(1)
             ->generate($post->url('nl'));
         $output_file = '/images/qr-code/img-' . $slug . '.png';
         Storage::disk('public')->put($output_file, $image); //storage/app/public/img/qr-code/img-1557309130.png

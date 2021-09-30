@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Barryvdh\DomPDF\ServiceProvider::class,
+        Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
@@ -230,7 +230,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'PDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
     ],
 

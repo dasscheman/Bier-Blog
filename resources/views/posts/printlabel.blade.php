@@ -132,9 +132,9 @@
                     <tr>
                         <th></th>
                         <th>
-                            <h3>
+                            <h2>
                                 {{$post->title}}
-                            </h3>
+                            </h2>
                         </th>
                         <th>
 
