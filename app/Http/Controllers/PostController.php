@@ -33,7 +33,7 @@ class PostController extends Controller
             'alcoholField' => BinshopsField::where('name', 'alcohol')->first()
         ];
 
-        return view('posts.printlabel', $data);
+//        return view('posts.printlabel', $data);
 
         $pdf = PDF::loadView('posts.printlabel', $data);
         return $pdf->download('document.pdf');
