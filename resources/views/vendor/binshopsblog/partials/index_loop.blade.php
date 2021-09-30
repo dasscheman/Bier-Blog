@@ -22,9 +22,7 @@
                 <span class="light-text">Authored by: </span> {{$post->post->author->name}} <span class="light-text">Posted at: </span> {{date('d M Y ', strtotime($post->post->posted_at))}}
             </div>
             <div class='text-center'>
-                @foreach($post->categories as $catergory)
-                    <a href="{{$post->url($locale)}}" class="btn btn-primary">View Post</a>
-                @endforeach
+                <a href="{{$post->url($locale)}}" class="btn btn-primary">View Post</a>
             </div>
         </div>
     </div>
