@@ -32,7 +32,7 @@ class PostController extends Controller
 
         $image = \QrCode::format('png')
             ->size(200)->errorCorrection('H')
-            ->generate('A simple example of QR code!');
+            ->generate($post->url('nl'));
         $output_file = '/images/qr-code/img-' . $slug . '.png';
         Storage::disk('public')->put($output_file, $image); //storage/app/public/img/qr-code/img-1557309130.png
 
