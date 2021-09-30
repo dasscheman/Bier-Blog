@@ -23,9 +23,8 @@
             </div>
             <div class='text-center'>
                 @foreach($post->categories as $catergory)
-
                     <a href="{{$post->url($locale)}}" class="btn btn-primary">View Post</a>
-                @endfor
+                @endforeach
             </div>
         </div>
     </div>
