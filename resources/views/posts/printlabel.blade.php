@@ -151,7 +151,7 @@
                                     {{$startSgField->label}}: {{$post->post->fieldValue($startSgField->id)}}
                                 @endisset
                                 @isset($eindSgField)
-                                    {{$eindSgField->label}}: {{$post->fieldValue($eindSgField->id)}}
+                                    {{$eindSgField->label}}: {{$post->post->fieldValue($eindSgField->id)}}
                                 @endisset
                             </i>
                         </td>
@@ -159,7 +159,7 @@
                             <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 25%">
                             @isset($alcoholField)
                                 <i>
-                                    {{$alcoholField->label}}: {{$post->fieldValue($alcoholField->id)}} %
+                                    {{$alcoholField->label}}: {{$post->post->fieldValue($alcoholField->id)}} %
                                 </i>
                             @endisset
                         </td>
