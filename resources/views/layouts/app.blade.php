@@ -57,8 +57,7 @@
                         <!-- Authentication Links -->
 
                         <a class="nav-link" href="{{ url('/nl/blog/category/bier-batch') }}">{{ __('Batch') }}</a>
-                        <a class="nav-link" href="{{ url('/nl/blog/category/recept') }}">{{ __('Recepten') }}</a>
-                        <a class="nav-link" href="{{ url('/nl/blog/category/voorraad') }}">{{ __('Voorraad  ') }}</a>
+                        <a class="nav-link" href="{{ url('/nl/blog/voorraad') }}">{{ __('Voorraad  ') }}</a>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">

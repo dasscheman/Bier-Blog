@@ -8,8 +8,8 @@
         }
         @page {
 
-            margin-top: 5mm;
-            margin-bottom: 0mm;
+            /*margin-top: 1mm;*/
+            /*margin-bottom: -2mm;*/
             /*margin: 0px 0px 0px 0px !important;*/
             /*padding: 0px 0px 0px 0px !important;*/
         }
@@ -20,8 +20,10 @@
 
         /* Float four columns side by side */
         .column {
+            margin-left: 3mm;
+            margin-right: 3mm;
             float: left;
-            width: 105mm;
+            width: 99mm;
             padding: 0px;
         }
 
@@ -50,7 +52,7 @@
 
         /* Style the counter cards */
         .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
             padding: 1px;
             text-align: center;
         }
@@ -83,21 +85,21 @@
     </style>
 </head>
 <div>
-@for($row = 1; $row < 7; $row++)
+@for($row = 1; $row < 8; $row++)
     <div class="row">
         <div class="column">
             <div class="card">
+                <h4>
+                    <b>
+
+                        {{$post->title}}
+                    </b>
+                </h4>
                 <table>
                     <tr>
                         <th></th>
-                        <th>
-                            <h2>
-                                {{$post->title}}
-                            </h2>
-                        </th>
-                        <th>
-
-                        </th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td>
@@ -105,14 +107,6 @@
                         </td>
                         <td class="centre">
                             {{$post->subtitle}}
-                            <i style="font-size: 10px">
-                                @isset($startSgField)
-                                    {{$startSgField->label}}: {{$post->post->fieldValue($startSgField->id)}}
-                                @endisset
-                                @isset($eindSgField)
-                                    {{$eindSgField->label}}: {{$post->post->fieldValue($eindSgField->id)}}
-                                @endisset
-                            </i>
                         </td>
                         <td>
                             <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 25%">
@@ -128,17 +122,16 @@
         </div>
         <div class="column">
             <div class="card">
+                <h4>
+                    <b>
+                        {{$post->title}}
+                    </b>
+                </h4>
                 <table>
                     <tr>
                         <th></th>
-                        <th>
-                            <h2>
-                                {{$post->title}}
-                            </h2>
-                        </th>
-                        <th>
-
-                        </th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td>
@@ -146,14 +139,6 @@
                         </td>
                         <td class="centre">
                             {{$post->subtitle}}
-                            <i style="font-size: 10px">
-                                @isset($startSgField)
-                                    {{$startSgField->label}}: {{$post->post->fieldValue($startSgField->id)}}
-                                @endisset
-                                @isset($eindSgField)
-                                    {{$eindSgField->label}}: {{$post->post->fieldValue($eindSgField->id)}}
-                                @endisset
-                            </i>
                         </td>
                         <td>
                             <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 25%">
