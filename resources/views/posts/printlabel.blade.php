@@ -111,7 +111,7 @@
                             @endisset
                             <br>
                             <br>
-                            {{url('/')}}
+                            {{$url}}
                         </td>
                         <td>
                             <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 40%">
@@ -145,7 +145,7 @@
                             @endisset
                             <br>
                             <br>
-                            {{url('/')}}
+                            {{$url}}
                         </td>
                         <td>
                             <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 40%">

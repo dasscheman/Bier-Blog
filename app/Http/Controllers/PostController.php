@@ -41,11 +41,10 @@ class PostController extends Controller
             'qr_file' => $output_file,
             'startSgField' => BinshopsField::where('name', 'startsg')->first(),
             'eindSgField' => BinshopsField::where('name', 'eindsg')->first(),
-            'alcoholField' => BinshopsField::where('name', 'alcohol')->first()
+            'alcoholField' => BinshopsField::where('name', 'alcohol')->first(),
+            'url' => preg_replace('#^https?://#', '', rtrim(url()->to('/'),'/'))
         ];
-
-
-//        return view('posts.printlabel', $data);
+        // return view('posts.printlabel', $data);
         $pdf = PDF::loadView('posts.printlabel', $data);
         return $pdf->stream('labels.pdf');
 
