@@ -7,8 +7,7 @@
             box-sizing: border-box;
         }
         @page {
-
-            /*margin-top: 1mm;*/
+            margin-top: 6mm;
             /*margin-bottom: -2mm;*/
             /*margin: 0px 0px 0px 0px !important;*/
             /*padding: 0px 0px 0px 0px !important;*/
@@ -20,7 +19,7 @@
 
         /* Float four columns side by side */
         .column {
-            margin-left: 3mm;
+            margin-left: 5mm;
             margin-right: 3mm;
             float: left;
             width: 99mm;
@@ -29,9 +28,9 @@
 
         /* Remove extra left and right margins, due to padding */
         .row {
-            margin: 0px;
-            height: 42.3mm;
-            max-height: 42.3mm;
+            /*margin: 0px;*/
+            height: 41.3mm;
+            max-height: 41.3mm;
         }
 
         /* Clear floats after the columns */
@@ -89,12 +88,9 @@
     <div class="row">
         <div class="column">
             <div class="card">
-                <h4>
-                    <b>
-
-                        {{$post->title}}
-                    </b>
-                </h4>
+                <b>
+                    {{$post->title}}
+                </b>
                 <table>
                     <tr>
                         <th></th>
@@ -103,18 +99,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="{{ url($qr_file) }}" class="left" style="max-width: 25%;">
+                            <img src="{{ url($qr_file) }}" class="left" style="max-width: 60%;">
                         </td>
                         <td class="centre">
                             {{$post->subtitle}}
-                        </td>
-                        <td>
-                            <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 25%">
                             @isset($alcoholField)
+                                <br>
                                 <i>
                                     {{$alcoholField->label}}: {{$post->post->fieldValue($alcoholField->id)}} %
                                 </i>
                             @endisset
+                            <br>
+                            <br>
+                            {{url('/')}}
+                        </td>
+                        <td>
+                            <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 40%">
                         </td>
                     </tr>
                 </table>
@@ -122,11 +122,9 @@
         </div>
         <div class="column">
             <div class="card">
-                <h4>
-                    <b>
-                        {{$post->title}}
-                    </b>
-                </h4>
+                <b>
+                    {{$post->title}}
+                </b>
                 <table>
                     <tr>
                         <th></th>
@@ -135,18 +133,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="{{ url($qr_file) }}" class="left" style="max-width: 25%;">
+                            <img src="{{ url($qr_file) }}" class="left" style="max-width: 60%;">
                         </td>
                         <td class="centre">
                             {{$post->subtitle}}
-                        </td>
-                        <td>
-                            <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 25%">
                             @isset($alcoholField)
+                                <br>
                                 <i>
                                     {{$alcoholField->label}}: {{$post->post->fieldValue($alcoholField->id)}} %
                                 </i>
                             @endisset
+                            <br>
+                            <br>
+                            {{url('/')}}
+                        </td>
+                        <td>
+                            <img src="{{ url('images/logo.jpg') }}" class="right" style="max-width: 40%">
                         </td>
                     </tr>
                 </table>
