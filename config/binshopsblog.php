@@ -19,7 +19,7 @@ return [
 
     'use_custom_view_files' => false, // set to false to disable the use of being able to make blog posts include a view from resources/views/custom_blog_posts/*.blade.php. Default: false. Set to true to use this feature. Default: false
 
-    'per_page' => 50, // how many posts to show per page on the blog index page. Default: 10
+    'per_page' => 10, // how many posts to show per page on the blog index page. Default: 10
 
 
     'image_upload_enabled' => true, // true or false, if image uploading is allowed.
@@ -188,5 +188,7 @@ return [
     ],
 
     //Shows full text of post in listing pages like search result page or category page. Now it shows a preview
-    'show_full_text_at_list' => true,
+    'show_full_text_at_list' => false,
+    // When 'show_full_text_at_list' is false, you can define number of characters defined.
+    'show_number_characters' => env('SHOW_NUMBER_CHARACTERS', 400)
 ];

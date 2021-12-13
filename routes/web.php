@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect( url('/nl/blog'));
-});
-
 Route::get('/{blogPostSlug}/print',
     'PostController@printlabel')
     ->name('printlabel');

@@ -49,15 +49,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-
-                        <a class="nav-link" href="{{ url('/nl/blog/category/bier-batch') }}">{{ __('Batch') }}</a>
-                        <a class="nav-link" href="{{ url('/nl/blog/voorraad') }}">{{ __('Voorraad  ') }}</a>
+                        <a class="nav-link" href="{{ url('/blog/category/bier-batch') }}">{{ __('Batch') }}</a>
+                        <a class="nav-link" href="{{ url('/blog/voorraad') }}">{{ __('Voorraad  ') }}</a>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -80,12 +78,12 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     @foreach( BinshopsBlog\Models\BinshopsLanguage::all('locale','name') ?? '' as $lang)
-                                        <a class="dropdown-item" href="{{route("binshopsblog.index" , $lang->locale)}}">
+                                        <a class="dropdown-item" href="{{url('language/' . $lang->locale)}}">
                                             <span>{{$lang->name}}</span>
                                         </a>
                                     @endforeach
@@ -107,5 +105,7 @@
             @yield('content')
         </main>
     </div>
+
+    @yield('blog-custom-css')
 </body>
 </html>

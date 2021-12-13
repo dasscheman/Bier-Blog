@@ -6,3 +6,21 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+/*.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination li {
+    display: block;
+}
+.col-md-6 {
+    padding-bottom: 30px;
+}*/
+
+
+.col-md-9 {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
