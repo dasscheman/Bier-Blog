@@ -5,7 +5,7 @@
         @endif
     @endforeach
     <a href="{{$post->edit_url()}}" class="btn btn-outline-secondary btn-sm pull-right float-right">Edit
-        Post</a>
+        @lang('blog.post')</a>
 @endif
 
 <h1 class='blog_title'>{{$post->title}}</h1>
@@ -28,7 +28,7 @@
 
 <hr/>
 
-Posted <strong>{{$post->post->posted_at->diffForHumans()}}</strong>
+@lang('blog.posted') <strong>{{$post->post->posted_at->diffForHumans()}}</strong>
 
 @includeWhen($post->author,"binshopsblog::partials.author",['post'=>$post])
 @includeWhen($post->categories,"binshopsblog::partials.categories",['post'=>$post])

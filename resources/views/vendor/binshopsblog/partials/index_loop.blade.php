@@ -9,13 +9,11 @@
     <div class="card-body">
         <h3 class="card-title"><a href='{{$post->url()}}'>{{$post->title}}</a></h3>
         <h5 class="card-title">{{$post->subtitle}}</h5>
-
     	<p>{!! $post->postBodyOutput(true) !!}</p>
-
         <div class="card-footer">
             <small class="text-muted">
-                <span class="light-text">@lang('binshop.authored_by'): </span> {{$post->post->author->name}}
-                <span class="light-text">@lang('binshop.posted_at'): </span> {{date('d M Y ', strtotime($post->post->posted_at))}}
+                <span class="light-text">@lang('blog.authored_by'): </span> {{$post->post->author->name}}
+                <span class="light-text">@lang('blog.posted_at'): </span> {{date('d M Y ', strtotime($post->post->posted_at))}}
             </small>
         </div>
     </div>
