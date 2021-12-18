@@ -117,8 +117,8 @@ return [
     'captcha' => [
         'captcha_enabled' => true, // true = we should use a captcha, false = turn it off. If comments are disabled this makes no difference.
         'captcha_type' => \BinshopsBlog\Captcha\Basic::class, // this should be a class that implements the \BinshopsBlog\Interfaces\CaptchaInterface interface
-        'basic_question' => "What is the opposite of white?", // a simple captcha question to always ask (if captcha_type is set to 'basic'
-        'basic_answers' => "black,dark", // comma separated list of possible answers. Don't worry about case.
+        'basic_question' => "Wat is de achternaam van de eigenaar van deze site", // a simple captcha question to always ask (if captcha_type is set to 'basic'
+        'basic_answers' => "asscheman", // comma separated list of possible answers. Don't worry about case.
     ],
 
     ////////// RSS FEED
@@ -136,8 +136,6 @@ return [
     ////////// comments:
 
     'comments' => [
-
-
         // What type (if any) of comments/comment form to show.
         // options:
         //      'built_in' (default, uses own database for comments),
@@ -145,17 +143,12 @@ return [
         //      'custom' (will load binshopsblog::partials.custom_comments, which you can copy to your vendor view dir to customise
         //      'disabled' (turn comments off)
         'type_of_comments_to_show' => 'built_in', // default: built_in
-
         'max_num_of_comments_to_show' => 1000, // max num of comments to show on a single blog post. Set to a lower number for smaller page sizes. No comment pagination is built in yet.
-
         // should we save the IP address in the database?
         'save_ip_address' => true, // Default: true
 
-
         //should comments appear straight away on the site (set this to true)? or wait for approval (set to false)
         'auto_approve_comments' => false, // default: false
-
-
         'save_user_id_if_logged_in' => true, // if user is logged in, should we save that user id? (if false it will always ask for an author name, which the commenter can provide
 
         'user_field_for_author_name' => "name", // what field on your User model should we use when echoing out the author name? By default this should be 'name', but maybe you have it set up to use 'username' etc.
@@ -165,20 +158,17 @@ return [
         'ask_for_author_website' => true, // show 'author website' on the form, show the link when viewing the comment
 
         'disqus' => [
-
             // only applies if comments.type_of_comments_to_show is set to 'disqus'
 //              The following config option can be found by looking for the following line on the embed code of your disqus code:
 //                          s.src = 'https://yourusername_or_sitename.disqus.com/embed.js';
 //
 //             You must enter the whole url (but not the "s.src = '" part!)
             'src_url' => "https://GET_THIS_FROM_YOUR_EMBED_CODE.disqus.com/embed.js", // enter the url here, from the html snippet disqus provides
-
         ],
     ],
 
     'search' => [
         'search_enabled' => true, //you can easily turn off search functionality
-
         'limit-results'=> 50,
         'enable_wildcards' => true,
         'weight' => [

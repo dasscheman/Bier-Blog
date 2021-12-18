@@ -53,14 +53,9 @@ class User extends Authenticatable
         // Enter the logic needed for your app.
         // Maybe you can just hardcode in a user id that you
         //   know is always an admin ID?
-
-        if (       $this->id === 1
-            && $this->email === "daan@test.nl"
-        ){
-
+        if ( $this->id === 1 && $this->email === "daan@test.nl"){
             // return true so this user CAN edit/post/delete
             // blog posts (and post any HTML/JS)
-
             return true;
         }
 
